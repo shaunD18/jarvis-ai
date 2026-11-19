@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b14"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="JARVIS">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
+<title>JARVIS • Personal AI</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<header><div class="brand"><div class="orb">J</div><div><b>J.A.R.V.I.S.</b><small>PERSONAL OPERATIONS SYSTEM</small></div></div><span class="status"><i></i> LOCAL MODE</span></header>
+<main>
+<section class="hero"><p class="eyebrow">GOOD TO HAVE YOU BACK</p><h1>Your day.<br><span>Your command.</span></h1><p class="muted">Your private command center is ready.</p></section>
+<section class="chat card">
+<div class="section-head"><div><p class="eyebrow">ASSISTANT</p><h2>Talk to JARVIS</h2></div><span class="pill">V1.0</span></div>
+<div id="conversation" class="conversation"><div class="bubble bot">JARVIS systems online. I can help plan, organize, brainstorm income ideas, and explain your finances. Connect an AI provider later for live AI responses.</div></div>
+<div class="composer"><input id="prompt" placeholder="Ask JARVIS anything…" autocomplete="off"><button id="send" aria-label="Send">↑</button></div>
+<div class="actions"><button id="voice" class="ghost">🎙 Voice input</button><button id="speak" class="ghost">🔊 Read reply</button></div>
+</section>
+<section class="grid">
+<article class="card"><p class="eyebrow">WEALTH LAB</p><h3>Build your money plan</h3><p class="muted">Track goals, learn investing basics, and practice with paper trades—not real money.</p><button class="outline" data-tab="wealth">Open Wealth Lab →</button></article>
+<article class="card"><p class="eyebrow">DIGITAL DEFENSE</p><h3>Secure your setup</h3><p class="muted">A practical checklist for accounts, devices, links, and this app.</p><button class="outline" data-tab="security">Open Security →</button></article>
+<article class="card"><p class="eyebrow">DAILY OPS</p><h3>Stay organized</h3><p class="muted">Save tasks and keep a simple running list on this device.</p><button class="outline" data-tab="tasks">Open Tasks →</button></article>
+</section>
+<section id="wealth" class="card panel hidden"><p class="eyebrow">WEALTH LAB</p><h2>Million-dollar goal tracker</h2><p class="muted">A goal is not a guarantee. Build income, savings, and investing knowledge step by step.</p><label>Target amount ($)<input id="target" type="number" value="1000000"></label><label>Current amount ($)<input id="current" type="number" value="0"></label><button id="saveGoal">Save goal</button><p id="goalStatus" class="result"></p><hr><h3>Paper trading journal</h3><p class="muted">Practice recording hypothetical trades. No brokerage connection or real orders.</p><label>Asset / ticker<input id="ticker" placeholder="e.g. AAPL"></label><label>Why would you enter?<textarea id="reason" placeholder="Write your thesis and risk first…"></textarea></label><button id="addTrade">Log practice idea</button><div id="trades" class="list"></div></section>
+<section id="security" class="card panel hidden"><p class="eyebrow">DIGITAL DEFENSE</p><h2>Security checklist</h2><p class="muted">No app can promise to be unhackable. iPhone apps are sandboxed, so JARVIS cannot scan or clean the whole iPhone.</p><div id="checks"></div></section>
+<section id="tasks" class="card panel hidden"><p class="eyebrow">DAILY OPS</p><h2>Your task list</h2><div class="composer"><input id="taskInput" placeholder="Add a task…"><button id="addTask">+</button></div><div id="tasksList" class="list"></div></section>
+</main><footer>JARVIS V1 • Data stays in this browser on this device <button id="clearData" class="text-button">Clear app data</button></footer>
+</div><script src="app.js"></script>
+</body></html>
